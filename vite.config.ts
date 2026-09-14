@@ -4,9 +4,16 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/TAZ/',
+  base: '/CAZ/',
+  server: {
+    port: 5174,
+  },
   plugins: [
     react(),
     tailwindcss(),
   ],
+  optimizeDeps: {
+    exclude: ['maplibre-gl'],
+  },
 })
+
