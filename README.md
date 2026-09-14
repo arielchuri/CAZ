@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# 🌍 CAZ OS (Community Autonomous Zone)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Offline-first, peer-to-peer socio-technical operating system for neighborhood resilience, mutual aid, and direct horizontal self-governance.**
 
-Currently, two official plugins are available:
+## 📖 About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+CAZ OS is built to empower communities by providing digital tools for coordination that don't rely on centralized infrastructure. Whether for organizing mutual aid, coordinating emergency responses, or establishing neighborhood-level governance, CAZ OS is designed to be resilient, offline-capable, and completely horizontal.
 
-## React Compiler
+### ✨ Key Features
+- **Offline-First Architecture**: Works locally and syncs when a connection is available.
+- **Peer-to-Peer Networking**: Decentralized communication without central servers.
+- **Mutual Aid Coordination**: Tools for matching community needs with local resources.
+- **Horizontal Self-Governance**: Decision-making interfaces built for consensus and direct democracy.
+- **Interactive Mapping**: Geospatial tools powered by MapLibre for neighborhood visualization.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Built With
 
-## Expanding the ESLint configuration
+This project is built with modern, performant web technologies:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **[React 19](https://react.dev/)** - UI Library
+- **[Vite](https://vitejs.dev/)** - Build Tool & Development Server
+- **[TypeScript](https://www.typescriptlang.org/)** - Static Typing
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first Styling
+- **[Framer Motion](https://www.framer.com/motion/)** - Animations
+- **[MapLibre GL JS](https://maplibre.org/)** - Interactive Maps
+- **[dnd-kit](https://docs.dndkit.com/)** - Drag & Drop Interactions
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To get a local copy up and running, follow these simple steps.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You will need Node.js installed on your machine.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository
+   ```sh
+   git clone https://github.com/arielchuri/CAZ.git
+   ```
+2. Navigate to the project directory
+   ```sh
+   cd CAZ
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+## 💻 Development
+
+| Command | Action | Description |
+| :--- | :--- | :--- |
+| `npm run dev` | **Start Dev Server** | Runs Vite's local dev server with Hot Module Replacement (HMR). Best for daily coding. |
+| `npm run build` | **Production Build** | Runs TypeScript checks and bundles the app into `dist/`. |
+| `npm run preview` | **Preview Build** | Launches a local web server to preview the `dist/` directory before deployment. |
+| `npm run lint` | **Lint Code** | Runs ESLint to check for code quality and style issues. |
+
+## 🌐 Deployment
+
+This project is configured to automatically deploy to **GitHub Pages** using GitHub Actions.
+
+Any code pushed to the `main` branch will trigger the workflow defined in `.github/workflows/deploy.yml`, which builds the project and pushes the output to the `gh-pages` branch. 
+
+To view your live site, ensure that GitHub Pages is enabled in your repository settings (Settings > Pages) and set to serve from the `gh-pages` branch.
+
+---
+
+*Designed for resilience. Built for community.*
