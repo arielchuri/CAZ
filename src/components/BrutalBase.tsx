@@ -1,6 +1,6 @@
 import React from "react";
 import * as Popover from "@radix-ui/react-popover";
-import { Info, Minus, Plus, Maximize2, Minimize2 } from "lucide-react";
+import { Info, Minus, Plus, Maximize2, Minimize2, GripVertical } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -19,6 +19,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   isExpanded?: boolean;
   onToggleExpand?: () => void;
   noBodyPadding?: boolean;
+  dragHandleProps?: React.HTMLAttributes<HTMLButtonElement>;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -33,7 +34,8 @@ export const Card: React.FC<CardProps> = ({
   noBodyPadding = false,
   children,
   className,
-  accentColor = "bg-[#1A66A6]",
+  accentColor = "bg-[#005EAC]",
+  dragHandleProps,
   ...props
 }) => {
   return (
@@ -57,8 +59,19 @@ export const Card: React.FC<CardProps> = ({
             accentColor
           )}
         >
-          <div className="flex items-center gap-2 min-w-0">
-            <h2 className="text-[11px] font-bold uppercase tracking-wider text-white font-mono truncate leading-none m-0">
+          <div className="flex items-center gap-1.5 min-w-0">
+            {dragHandleProps && (
+              <button
+                type="button"
+                className="w-4 h-4 flex items-center justify-center opacity-70 hover:opacity-100 cursor-grab active:cursor-grabbing border-none bg-transparent p-0 shrink-0 select-none touch-none touch-target-expand"
+                title="Drag to reorder section"
+                aria-label="Drag to reorder section"
+                {...dragHandleProps}
+              >
+                <GripVertical size={13} />
+              </button>
+            )}
+            <h2 className="text-xs font-bold uppercase tracking-wider font-mono truncate leading-none m-0">
               {title}
             </h2>
             {badge}
@@ -70,7 +83,10 @@ export const Card: React.FC<CardProps> = ({
             {hint && (
               <Popover.Root>
                 <Popover.Trigger asChild>
-                  <button className="w-5 h-5 flex items-center justify-center text-white/80 hover:text-white transition-colors border-none bg-transparent cursor-pointer p-0">
+                  <button 
+                    aria-label={`About ${title} section`}
+                    className="w-5 h-5 flex items-center justify-center text-white/80 hover:text-white transition-colors border-none bg-transparent cursor-pointer p-0 touch-target-expand"
+                  >
                     <Info size={13} />
                   </button>
                 </Popover.Trigger>
@@ -83,7 +99,7 @@ export const Card: React.FC<CardProps> = ({
                     }}
                     sideOffset={4}
                   >
-                    <p className="text-[10px] font-semibold uppercase leading-normal text-[#222D2C] font-mono m-0">
+                    <p className="text-xs font-semibold uppercase leading-normal text-[#222D2C] font-mono m-0">
                       {hint}
                     </p>
                     <Popover.Arrow className="fill-[#222D2C]" />
@@ -99,7 +115,8 @@ export const Card: React.FC<CardProps> = ({
                   e.stopPropagation();
                   onToggleShade();
                 }}
-                className="w-5 h-5 bg-white/10 hover:bg-white/30 text-white border border-white/40 flex items-center justify-center cursor-pointer p-0 transition-colors"
+                aria-label={isShaded ? `Unshade ${title} window` : `Shade ${title} to title bar`}
+                className="w-5 h-5 bg-white/10 hover:bg-white/30 text-white border border-white/40 flex items-center justify-center cursor-pointer p-0 transition-colors touch-target-expand"
                 title={isShaded ? "Unshade Window" : "Shade to Title Bar"}
                 style={{ borderRadius: 0 }}
               >
@@ -114,7 +131,8 @@ export const Card: React.FC<CardProps> = ({
                   e.stopPropagation();
                   onToggleExpand();
                 }}
-                className="w-5 h-5 bg-white/10 hover:bg-white/30 text-white border border-white/40 flex items-center justify-center cursor-pointer p-0 transition-colors"
+                aria-label={isExpanded ? `Restore ${title} window` : `Expand ${title} to full screen`}
+                className="w-5 h-5 bg-white/10 hover:bg-white/30 text-white border border-white/40 flex items-center justify-center cursor-pointer p-0 transition-colors touch-target-expand"
                 title={isExpanded ? "Restore Window" : "Expand to Full Page"}
                 style={{ borderRadius: 0 }}
               >
@@ -142,15 +160,15 @@ interface FileItemProps {
 
 export const FileItem: React.FC<FileItemProps> = ({ name, size, icon }) => {
   return (
-    <div className="flex items-center gap-2 p-1.5 bg-[#EFECE6] border border-[#222D2C] hover:border-[#1A66A6] cursor-pointer transition-colors">
-      <div className="p-1 bg-[#1A66A6] text-white flex items-center justify-center shrink-0">
+    <div className="flex items-center gap-2 p-1.5 bg-[#EFECE6] border border-[#222D2C] hover:border-[#005EAC] cursor-pointer transition-colors">
+      <div className="p-1 bg-[#005EAC] text-white flex items-center justify-center shrink-0">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
-        <div className="font-mono font-bold text-[11px] truncate leading-normal text-[#222D2C]">
+        <div className="font-mono font-bold text-xs truncate leading-normal text-[#222D2C]">
           {name}
         </div>
-        <div className="font-mono text-[9px] text-[#5B6360] leading-normal">{size}</div>
+        <div className="font-mono text-xs text-[#5B6360] leading-normal">{size}</div>
       </div>
     </div>
   );
@@ -171,19 +189,19 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const variants = {
-    primary: "bg-[#1A66A6] text-[#FFFFFF] border-none hover:bg-[#145082]",
-    secondary: "bg-transparent text-[#1A66A6] border border-[#1A66A6] hover:bg-[#1A66A6]/10",
-    danger: "bg-[#D35B50] text-white border-none hover:bg-[#b84238]",
+    primary: "bg-[#005EAC] text-[#FFFFFF] border-none hover:bg-[#004B8A]",
+    secondary: "bg-transparent text-[#005EAC] border border-[#005EAC] hover:bg-[#005EAC]/10",
+    danger: "bg-[#DF4C40] text-white border-none hover:bg-[#C93B30]",
     outline: "bg-transparent text-[#222D2C] border border-[#222D2C] hover:bg-[#DFDDD7]",
-    yellow: "bg-[#F4D35A] text-[#222D2C] border border-[#222D2C] hover:bg-[#ebd052]",
-    blue: "bg-[#1A66A6] text-white border-none hover:bg-[#145082]",
-    green: "bg-[#54C93F] text-white border-none hover:bg-[#43a830]",
+    yellow: "bg-[#FAD13E] text-[#222D2C] border border-[#222D2C] hover:bg-[#E5BE32]",
+    blue: "bg-[#005EAC] text-white border-none hover:bg-[#004B8A]",
+    green: "bg-[#3CCC23] text-white border-none hover:bg-[#34B41E]",
     ghost: "bg-transparent text-[#222D2C] border-none hover:bg-[#DFDDD7]/50",
   };
 
   const sizeStyles = {
-    xs: "px-2 py-0.5 text-[10px] gap-1 h-[24px]",
-    sm: "px-2.5 py-1 text-[11px] gap-1.5 h-[26px]",
+    xs: "px-2 py-0.5 text-xs gap-1 h-[24px]",
+    sm: "px-2.5 py-1 text-xs gap-1.5 h-[26px]",
     md: "px-3.5 py-1.5 text-xs gap-2 h-[30px]",
     lg: "px-4.5 py-2 text-xs gap-2.5 h-[36px]",
   };

@@ -62,8 +62,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.198,
     "lat": 40.8624,
     "subCategory": "Microgrid Power",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "48V MPPT array charging 60kWh LiFePO4 battery storage bank at Montclair State.",
     "category": "infrastructure",
     "gridRef": "B7"
@@ -74,8 +74,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2215,
     "lat": 40.8695,
     "subCategory": "Mesh Relay",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Solar-powered 915MHz LoRa repeater + 2m/70cm W2NJ ham radio relay on the basalt ridge.",
     "category": "infrastructure",
     "gridRef": "A4"
@@ -98,8 +98,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2048,
     "lat": 40.8465,
     "subCategory": "Medical Triage",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "details": "Solar-refrigerated insulin bank, antibiotics, trauma dressings, and EMT post on Valley Road.",
     "category": "infrastructure",
     "gridRef": "C6"
@@ -110,8 +110,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2085,
     "lat": 40.8433,
     "subCategory": "Mutual Aid",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "details": "Central mutual aid distribution depot, cold storage pantry, and tool library on Valley Road.",
     "category": "infrastructure",
     "gridRef": "D6"
@@ -122,8 +122,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.218,
     "lat": 40.851,
     "subCategory": "Labor & Building",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Staging yard for collective volunteer labor, timber framing, and mortise-tenon joinery.",
     "category": "infrastructure",
     "gridRef": "C4"
@@ -146,8 +146,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.208,
     "lat": 40.832,
     "subCategory": "Microgrid Power",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "DC-coupled 18kW commercial rooftop solar array powering emergency communications.",
     "category": "infrastructure",
     "gridRef": "E6"
@@ -158,8 +158,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2112,
     "lat": 40.8202,
     "subCategory": "Labor & Tools",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Open-access woodworking, welding, and battery repair workshop on Walnut St.",
     "category": "infrastructure",
     "gridRef": "F5"
@@ -170,8 +170,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2123,
     "lat": 40.8231,
     "subCategory": "Microgrid Power",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "24kWh LiFePO4 battery pack backing up amphitheater emergency radios and public hall lighting.",
     "category": "infrastructure",
     "gridRef": "F5"
@@ -194,8 +194,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2155,
     "lat": 40.821,
     "subCategory": "Aid Station",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "Emergency water rations and neighborhood mesh dispatch relay at Edgemont Park.",
     "category": "infrastructure",
     "gridRef": "F5"
@@ -206,8 +206,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.208,
     "lat": 40.817,
     "subCategory": "Mutual Aid",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "details": "Community food share, infant supplies, and dry goods distribution locker.",
     "category": "infrastructure",
     "gridRef": "F6"
@@ -218,8 +218,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.216,
     "lat": 40.813,
     "subCategory": "Mesh Network",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Dual-band LoRa / Wi-Fi mesh relay bridging downtown Bloomfield Ave merchants.",
     "category": "infrastructure",
     "gridRef": "G5"
@@ -230,8 +230,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2165,
     "lat": 40.8125,
     "subCategory": "Medical Triage",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "details": "Central first aid triage center, AED post, and emergency oxygen supply point.",
     "category": "infrastructure",
     "gridRef": "G4"
@@ -242,8 +242,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.218,
     "lat": 40.8135,
     "subCategory": "Mutual Aid",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "details": "24/7 solar-powered community refrigerator and non-perishable pantry box.",
     "category": "infrastructure",
     "gridRef": "G4"
@@ -254,8 +254,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.21,
     "lat": 40.811,
     "subCategory": "Labor & Tools",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Blacksmithing forge, sheet metal brake, and solar frame fabrication workshop.",
     "category": "infrastructure",
     "gridRef": "G5"
@@ -266,8 +266,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.205,
     "lat": 40.809,
     "subCategory": "Mesh Relay",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "High-gain omni antenna linking the South End to downtown mesh nodes.",
     "category": "infrastructure",
     "gridRef": "G6"
@@ -278,8 +278,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.216,
     "lat": 40.803,
     "subCategory": "Microgrid Power",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "details": "12kWh LiFePO4 battery bank providing emergency power to South End residential refrigeration.",
     "category": "infrastructure",
     "gridRef": "H5"
@@ -302,8 +302,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.212,
     "lat": 40.805,
     "subCategory": "Aid Station",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "Neighborhood disaster coordinator dispatch and emergency battery swap station.",
     "category": "infrastructure",
     "gridRef": "H5"
@@ -314,8 +314,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.238,
     "lat": 40.865,
     "subCategory": "Mesh Network",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Solar repeater providing emergency link to western Essex County networks.",
     "category": "infrastructure",
     "gridRef": "A1"
@@ -326,8 +326,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.195,
     "lat": 40.873,
     "subCategory": "Microgrid Power",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "High-capacity manual disconnect intertie at northern grid boundary.",
     "category": "infrastructure",
     "gridRef": "A8"
@@ -350,8 +350,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2013,
     "lat": 40.854,
     "subCategory": "Aid Station",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "Backup geothermal heated gymnasium and emergency community kitchen.",
     "category": "infrastructure",
     "gridRef": "C7"
@@ -362,8 +362,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.215,
     "lat": 40.826,
     "subCategory": "Labor & Tools",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "details": "Cabinetry and solar mounting bracket woodworking center.",
     "category": "infrastructure",
     "gridRef": "E5"
@@ -374,8 +374,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.211,
     "lat": 40.8195,
     "subCategory": "Microgrid Power",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "48V e-bike and cargo tricycle solar rapid charging hub.",
     "category": "infrastructure",
     "gridRef": "F5"
@@ -415,8 +415,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.22,
     "lat": 40.8715,
     "subCategory": "Wild Mushrooms",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "season": "Spring to Autumn (May - Oct)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Laetiporus_sulphureus_JPG01.jpg/320px-Laetiporus_sulphureus_JPG01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Laetiporus_sulphureus",
@@ -431,8 +431,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.234,
     "lat": 40.871,
     "subCategory": "Medicinal Conifer",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Year-Round (Winter Forage)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Pinus_strobus_needles.jpg/320px-Pinus_strobus_needles.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pinus_strobus",
@@ -447,8 +447,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.224,
     "lat": 40.873,
     "subCategory": "Wild Spice & Tea",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "season": "Late Summer to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Rhus_typhina_fruit.jpg/320px-Rhus_typhina_fruit.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rhus_typhina",
@@ -463,8 +463,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.228,
     "lat": 40.865,
     "subCategory": "Wild Mushrooms",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "season": "Mid Summer to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Cantharellus_cibarius_1.JPG/320px-Cantharellus_cibarius_1.JPG",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cantharellus_cibarius",
@@ -495,8 +495,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.228,
     "lat": 40.861,
     "subCategory": "Medicinal Bark",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Spring / Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Betula_lenta_bark.jpg/320px-Betula_lenta_bark.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Betula_lenta",
@@ -511,8 +511,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2005,
     "lat": 40.863,
     "subCategory": "Wild Alliums",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Early Spring (April - May)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Allium_tricoccum_01.jpg/320px-Allium_tricoccum_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Allium_tricoccum",
@@ -527,8 +527,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.219,
     "lat": 40.852,
     "subCategory": "Wild Berries",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "season": "Summer (June - July)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Rubus_idaeus_fruit.jpg/320px-Rubus_idaeus_fruit.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rubus_idaeus",
@@ -543,8 +543,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.222,
     "lat": 40.849,
     "subCategory": "Wild Mushrooms",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "season": "Early Spring (April - May)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Morchella_elata_1.jpg/320px-Morchella_elata_1.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Morchella",
@@ -559,8 +559,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2165,
     "lat": 40.8415,
     "subCategory": "Fruit Trees",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "season": "Early Summer (June)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Amelanchier_lamarckii_fruit.jpg/320px-Amelanchier_lamarckii_fruit.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Amelanchier",
@@ -575,8 +575,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2155,
     "lat": 40.842,
     "subCategory": "Edible Herbs",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Spring to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Oxalis_stricta_02.jpg/320px-Oxalis_stricta_02.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Oxalis_stricta",
@@ -607,8 +607,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2095,
     "lat": 40.831,
     "subCategory": "Wild Greens",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Spring (March - May)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alliaria_petiolata_flower.jpg/320px-Alliaria_petiolata_flower.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Alliaria_petiolata",
@@ -623,8 +623,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.21234,
     "lat": 40.82308,
     "subCategory": "Wild Greens",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Early Spring (March - May)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Urtica_dioica_-_Stinging_Nettle.jpg/320px-Urtica_dioica_-_Stinging_Nettle.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Urtica_dioica",
@@ -655,8 +655,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2145,
     "lat": 40.8205,
     "subCategory": "Wild Mushrooms",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "season": "Autumn to Mild Winter",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pleurotus_ostreatus_01.jpg/320px-Pleurotus_ostreatus_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pleurotus_ostreatus",
@@ -671,8 +671,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.225,
     "lat": 40.819,
     "subCategory": "Wild Mushrooms",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "season": "Autumn (Sept - Nov)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Grifola_frondosa_20080927_01.jpg/320px-Grifola_frondosa_20080927_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Grifola_frondosa",
@@ -687,8 +687,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2235,
     "lat": 40.814,
     "subCategory": "Medicinal Tree",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "season": "Autumn (October - Nov)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Ginkgo_biloba_leaves.jpg/320px-Ginkgo_biloba_leaves.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ginkgo_biloba",
@@ -703,8 +703,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.22,
     "lat": 40.811,
     "subCategory": "Edible Herbs",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "season": "Spring / Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg/320px-Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taraxacum",
@@ -719,8 +719,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2045,
     "lat": 40.8085,
     "subCategory": "Wild Herbs",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "season": "Spring to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Trifolium_pratense_080608.jpg/320px-Trifolium_pratense_080608.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trifolium_pratense",
@@ -735,8 +735,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.206,
     "lat": 40.8075,
     "subCategory": "Medicinal Herbs",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Spring to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Plantago_major_01.jpg/320px-Plantago_major_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Plantago_major",
@@ -751,8 +751,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.218,
     "lat": 40.8005,
     "subCategory": "Fruit Trees",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "season": "Late Autumn (After First Frost)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Diospyros_virginiana_fruit.jpg/320px-Diospyros_virginiana_fruit.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Diospyros_virginiana",
@@ -767,8 +767,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.221,
     "lat": 40.7995,
     "subCategory": "Native Fruit Trees",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Autumn (September - Oct)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Asimina_triloba_fruit.jpg/320px-Asimina_triloba_fruit.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Asimina_triloba",
@@ -783,8 +783,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.216,
     "lat": 40.7975,
     "subCategory": "Wild Alliums",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Spring / Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Allium_vineale_1.jpg/320px-Allium_vineale_1.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Allium_vineale",
@@ -815,8 +815,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.204,
     "lat": 40.856,
     "subCategory": "Wild Mushrooms",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "season": "Spring (May - June)",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Cerioporus_squamosus_01.jpg/320px-Cerioporus_squamosus_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cerioporus_squamosus",
@@ -831,8 +831,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.21,
     "lat": 40.819,
     "subCategory": "Medicinal Herbs",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "season": "Summer to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Verbascum_thapsus_01.jpg/320px-Verbascum_thapsus_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Verbascum_thapsus",
@@ -863,8 +863,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.213,
     "lat": 40.815,
     "subCategory": "Aromatic Herbs",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "season": "Summer to Autumn",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Artemisia_vulgaris_01.jpg/320px-Artemisia_vulgaris_01.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Artemisia_vulgaris",
@@ -891,8 +891,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2025,
     "lat": 40.8585,
     "subCategory": "County Parklands",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Yantacaw_Brook_Park",
     "details": "11.5-acre linear stream park with historic stone footbridges and waterfowl sanctuary.",
     "category": "wikipedia",
@@ -917,8 +917,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2135,
     "lat": 40.8433,
     "subCategory": "Tudor Landmark",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bellevue_Theater_(New_Jersey)",
     "details": "Built in 1922 in Tudor Revival architectural style. Historic Upper Montclair community cultural hub.",
     "category": "wikipedia",
@@ -930,8 +930,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2165,
     "lat": 40.8415,
     "subCategory": "Historic Landscape",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Anderson_Park_(Montclair,_New_Jersey)",
     "details": "Designed in 1903 by the legendary Olmsted Brothers landscape architects. Features open meadow commons and historic tree canopy.",
     "category": "wikipedia",
@@ -969,8 +969,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2155,
     "lat": 40.821,
     "subCategory": "Municipal Parklands",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Edgemont_Memorial_Park",
     "details": "Picturesque park with island pond, World War I monument, and walking paths.",
     "category": "wikipedia",
@@ -995,8 +995,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2241,
     "lat": 40.8146,
     "subCategory": "Cultural Landmark",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Montclair_Art_Museum",
     "details": "Founded in 1914. Renowned for its American art collection and extensive Native American historical artifacts.",
     "category": "wikipedia",
@@ -1008,8 +1008,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.217,
     "lat": 40.8135,
     "subCategory": "Performing Arts",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Wellmont_Theater",
     "details": "Built in 1922 as a vaudeville theater. Historic performance and live music center on Bloomfield Ave.",
     "category": "wikipedia",
@@ -1021,8 +1021,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2105,
     "lat": 40.8105,
     "subCategory": "Historic Museum",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crane_House_and_Historic_YWCA",
     "details": "Built in 1796 by Israel Crane. Served as African American YWCA from 1920 to 1965, pivotal in civil rights.",
     "category": "wikipedia",
@@ -1034,8 +1034,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.218,
     "lat": 40.8005,
     "subCategory": "Historic Springs & Park",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nishuane_Park",
     "details": "17-acre historic park featuring natural fresh spring runoff and centuries-old oak canopy.",
     "category": "wikipedia",
@@ -1086,8 +1086,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.209,
     "lat": 40.8115,
     "subCategory": "Colonial Landmark",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Israel_Crane",
     "details": "Original homestead site of turnpike merchant Israel Crane, founder of Newark-Pompton Turnpike.",
     "category": "wikipedia",
@@ -1112,8 +1112,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.21,
     "lat": 40.8095,
     "subCategory": "Historic Workshop",
-    "color": "#F39D22",
-    "badgeBg": "bg-[#F39D22]",
+    "color": "#FF9600",
+    "badgeBg": "bg-[#FF9600]",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Montclair_History_Center",
     "details": "19th century timber carriage barn and wooden barrel cooperage shop on Orange Rd.",
     "category": "wikipedia",
@@ -1151,8 +1151,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.198,
     "lat": 40.8624,
     "subCategory": "University Commons",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "1 Normal Ave. Major public research university campus.",
     "category": "osm_poi",
     "gridRef": "B7"
@@ -1175,8 +1175,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.20132,
     "lat": 40.85406,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "87 Mt Hebron Rd. Bradford Elementary School main entrance and community gardens.",
     "category": "osm_poi",
     "gridRef": "C7"
@@ -1187,8 +1187,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.20457,
     "lat": 40.84069,
     "subCategory": "Public Library",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "185 Bellevue Ave. Historic Carnegie-funded library building in Upper Montclair village.",
     "category": "osm_poi",
     "gridRef": "D6"
@@ -1211,8 +1211,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.207,
     "lat": 40.8435,
     "subCategory": "Postal Service",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "242 Bellevue Ave. Upper Montclair branch post office.",
     "category": "osm_poi",
     "gridRef": "D6"
@@ -1223,8 +1223,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2065,
     "lat": 40.844,
     "subCategory": "Emergency Services",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "details": "588 Valley Rd. Upper Montclair municipal firehouse and emergency EMS bay.",
     "category": "osm_poi",
     "gridRef": "D6"
@@ -1247,8 +1247,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.202,
     "lat": 40.835,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "14 Garden St. Public elementary school and sports fields.",
     "category": "osm_poi",
     "gridRef": "E7"
@@ -1271,8 +1271,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.212,
     "lat": 40.836,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "173 Bellevue Ave. Named after Montclair-born Apollo 11 astronaut Buzz Aldrin.",
     "category": "osm_poi",
     "gridRef": "D5"
@@ -1283,8 +1283,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.21234,
     "lat": 40.82308,
     "subCategory": "Public School & Commons",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "100 Chestnut St. Montclair High School outdoor amphitheater & community commons.",
     "category": "osm_poi",
     "gridRef": "F5"
@@ -1295,8 +1295,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.217,
     "lat": 40.822,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "4 Edgemont Rd. Public elementary Montessori magnet school.",
     "category": "osm_poi",
     "gridRef": "F4"
@@ -1319,8 +1319,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.215,
     "lat": 40.819,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "176 N Fullerton Ave. Public middle school campus.",
     "category": "osm_poi",
     "gridRef": "F5"
@@ -1331,8 +1331,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2162,
     "lat": 40.8128,
     "subCategory": "Public Library",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "50 South Fullerton Ave. Public digital archives, tool library, and seed collection.",
     "category": "osm_poi",
     "gridRef": "G4"
@@ -1343,8 +1343,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.215,
     "lat": 40.811,
     "subCategory": "Civic Center",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "205 Claremont Ave. Town council chambers and municipal administration.",
     "category": "osm_poi",
     "gridRef": "G5"
@@ -1355,8 +1355,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.212,
     "lat": 40.813,
     "subCategory": "Emergency Services",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "details": "1 Pine St. Main emergency fire dispatch and rescue apparatus bays.",
     "category": "osm_poi",
     "gridRef": "G5"
@@ -1367,8 +1367,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.218,
     "lat": 40.812,
     "subCategory": "Postal Service",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "55 S Fullerton Ave. Central USPS sorting hub.",
     "category": "osm_poi",
     "gridRef": "G4"
@@ -1379,8 +1379,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.219,
     "lat": 40.808,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "54 Orange Rd. Public magnet elementary school for performing arts.",
     "category": "osm_poi",
     "gridRef": "G4"
@@ -1391,8 +1391,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.206,
     "lat": 40.808,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "25 Maple Ave. Public visual and performing arts middle school.",
     "category": "osm_poi",
     "gridRef": "G6"
@@ -1403,8 +1403,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.205,
     "lat": 40.809,
     "subCategory": "Civic Center",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "details": "Maple Ave & Woodland Ave. Public athletic courts and community meeting rooms.",
     "category": "osm_poi",
     "gridRef": "G6"
@@ -1427,8 +1427,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.215,
     "lat": 40.7985,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "36 Cedar Ave. South End community educational hub.",
     "category": "osm_poi",
     "gridRef": "H5"
@@ -1439,8 +1439,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.216,
     "lat": 40.799,
     "subCategory": "Emergency Services",
-    "color": "#D35B50",
-    "badgeBg": "bg-[#D35B50]",
+    "color": "#DF4C40",
+    "badgeBg": "bg-[#DF4C40]",
     "details": "Cedar Ave & Orange Rd South End fire station.",
     "category": "osm_poi",
     "gridRef": "H5"
@@ -1451,8 +1451,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.225,
     "lat": 40.805,
     "subCategory": "Public Park",
-    "color": "#54C93F",
-    "badgeBg": "bg-[#54C93F]",
+    "color": "#3CCC23",
+    "badgeBg": "bg-[#3CCC23]",
     "details": "Canterbury Rd public athletic field and neighborhood park.",
     "category": "osm_poi",
     "gridRef": "H3"
@@ -1463,8 +1463,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.21,
     "lat": 40.8155,
     "subCategory": "Public School",
-    "color": "#1A66A6",
-    "badgeBg": "bg-[#1A66A6]",
+    "color": "#005EAC",
+    "badgeBg": "bg-[#005EAC]",
     "details": "55 Washington St. Green ribbon LEED-certified public school campus.",
     "category": "osm_poi",
     "gridRef": "F5"
@@ -1475,8 +1475,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.209,
     "lat": 40.841,
     "subCategory": "Primary Residence",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "details": "Primary base station: 4.8kWh backup, W2NJ ham station & LoRa mesh gateway.",
     "category": "account",
     "gridRef": "D6"
@@ -1487,8 +1487,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.198,
     "lat": 40.8624,
     "subCategory": "Lead Engineering Task",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "details": "Configuring 48V MPPT charge controllers and DC-coupled battery isolation switches.",
     "category": "account",
     "gridRef": "B7"
@@ -1499,8 +1499,8 @@ export const ALL_MAP_FEATURES: MapFeature[] = [
     "lng": -74.2215,
     "lat": 40.8695,
     "subCategory": "Maintenance Task",
-    "color": "#F4D35A",
-    "badgeBg": "bg-[#F4D35A]",
+    "color": "#FAD13E",
+    "badgeBg": "bg-[#FAD13E]",
     "details": "Quarterly inspection of solar mast and RF antenna coax integrity.",
     "category": "account",
     "gridRef": "A4"
@@ -1828,27 +1828,27 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
       style={{ margin: 0, padding: 0 }}
     >
       {/* ─── COLUMN PANEL: MAP LAYERS & DIRECTORY (Left Sidebar) ────── */}
-      <div className="w-64 bg-[#EFECE6] border-r border-[#222D2C] flex flex-col shrink-0 z-30 font-mono text-[10px]">
+      <div className="w-64 bg-[#EFECE6] border-r border-[#222D2C] flex flex-col shrink-0 z-30 font-mono text-xs">
         {/* Panel Header with Toggle All */}
         <div className="p-2 bg-[#222D2C] text-white flex justify-between items-center shrink-0">
           <div className="font-bold uppercase flex items-center gap-1.5">
-            <Layers size={13} className="text-[#F4D35A]" />
+            <Layers size={13} className="text-[#FAD13E]" />
             <span>Map Layers</span>
           </div>
           <div className="flex items-center gap-1">
             <button
               onClick={handleToggleAllLayers}
               className={cn(
-                "px-1.5 py-0.5 text-[8px] font-bold uppercase border cursor-pointer transition-colors shadow-sm",
+                "px-1.5 py-0.5 text-xs font-bold uppercase border cursor-pointer transition-colors shadow-sm",
                 allLayersActive 
-                  ? "bg-[#F4D35A] text-[#222D2C] border-[#F4D35A] hover:bg-[#e0c04a]" 
+                  ? "bg-[#FAD13E] text-[#222D2C] border-[#FAD13E] hover:bg-[#e0c04a]" 
                   : "bg-transparent text-white border-white/40 hover:bg-white/10"
               )}
               title={allLayersActive ? "Turn All Layers Off" : "Turn All Layers On"}
             >
               {allLayersActive ? "ALL ON" : "ALL OFF"}
             </button>
-            <span className="text-[8px] bg-white/20 px-1 py-0.5">OSM</span>
+            <span className="text-xs bg-white/20 px-1 py-0.5">OSM</span>
           </div>
         </div>
 
@@ -1861,7 +1861,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
               placeholder="Search fauna, nodes, articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-transparent border-none outline-none font-mono text-[9px] text-[#222D2C]"
+              className="w-full bg-transparent border-none outline-none font-mono text-xs text-[#222D2C]"
             />
           </div>
         </div>
@@ -1869,8 +1869,8 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
         {/* Toggleable Layer Rows */}
         <div className="p-1.5 border-b border-[#222D2C] flex flex-col gap-1 bg-[#FFFFFF] shrink-0">
           <LayerRow
-            label="TAZ Infrastructure"
-            color="bg-[#1A66A6]"
+            label="CAZ Infrastructure"
+            color="bg-[#005EAC]"
             count={ALL_MAP_FEATURES.filter(f => f.category === "infrastructure").length}
             active={showInfrastructure}
             onToggle={() => setShowInfrastructure(!showInfrastructure)}
@@ -1894,7 +1894,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
           />
           <LayerRow
             label="OSM Public Amenities & POIs"
-            color="bg-[#54C93F]"
+            color="bg-[#3CCC23]"
             count={ALL_MAP_FEATURES.filter(f => f.category === "osm_poi").length}
             active={showOsmPoi}
             onToggle={() => setShowOsmPoi(!showOsmPoi)}
@@ -1902,7 +1902,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
           />
           <LayerRow
             label="Ariel's Tasks & Favorites"
-            color="bg-[#F4D35A]"
+            color="bg-[#FAD13E]"
             textColor="text-[#222D2C]"
             count={ALL_MAP_FEATURES.filter(f => f.category === "account").length}
             active={showAccount}
@@ -1921,7 +1921,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
 
         {/* Location Directory (Scrollable List) */}
         <div className="flex-1 overflow-y-auto p-1.5 flex flex-col gap-1 bg-[#EFECE6]">
-          <span className="text-[8px] font-bold text-[#5B6360] uppercase px-1">
+          <span className="text-xs font-bold text-[#5B6360] uppercase px-1">
             Active Locations ({ALL_MAP_FEATURES.length})
           </span>
           {ALL_MAP_FEATURES.map((feat) => (
@@ -1931,18 +1931,18 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
               className={cn(
                 "p-1.5 border transition-colors cursor-pointer text-left flex items-center justify-between gap-1",
                 selectedFeature?.id === feat.id
-                  ? "bg-[#FFFFFF] border-[#1A66A6] ring-1 ring-[#1A66A6]"
+                  ? "bg-[#FFFFFF] border-[#005EAC] ring-1 ring-[#005EAC]"
                   : "bg-[#FFFFFF] border-[#222D2C] hover:bg-[#DFDDD7]"
               )}
             >
               <div className="min-w-0">
-                <div className="font-bold text-[9px] text-[#222D2C] truncate leading-tight flex items-center gap-1">
+                <div className="font-bold text-xs text-[#222D2C] truncate leading-tight flex items-center gap-1">
                   <span className={cn("w-2 h-2 shrink-0", feat.badgeBg)} />
                   <span className="truncate">{feat.name}</span>
                 </div>
-                <div className="text-[8px] text-[#5B6360] truncate">{feat.subCategory}</div>
+                <div className="text-xs text-[#5B6360] truncate">{feat.subCategory}</div>
               </div>
-              <span className="font-mono text-[8px] bg-[#EFECE6] border border-[#222D2C] px-1 py-0.2 shrink-0 font-bold">
+              <span className="font-mono text-xs bg-[#EFECE6] border border-[#222D2C] px-1 py-0.2 shrink-0 font-bold">
                 {feat.gridRef}
               </span>
             </div>
@@ -1950,7 +1950,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
         </div>
 
         {/* Bottom Status */}
-        <div className="p-1.5 bg-[#DFDDD7] border-t border-[#222D2C] flex justify-between items-center text-[8px] font-mono text-[#5B6360] shrink-0">
+        <div className="p-1.5 bg-[#DFDDD7] border-t border-[#222D2C] flex justify-between items-center text-xs font-mono text-[#5B6360] shrink-0">
           <span>BOUNDS: MONTCLAIR</span>
           <span className="font-bold text-[#222D2C]">CELL [{currentGridCell}]</span>
         </div>
@@ -2005,7 +2005,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
           {columnCenters.map(({ col, x }) => (
             <div
               key={`sticky-col-${col}`}
-              className="absolute top-0 -translate-x-1/2 font-mono text-[10px] font-black px-1.5 py-0.5 bg-[#FFFFFF] text-[#222D2C] border border-[#222D2C] shadow-sm leading-none"
+              className="absolute top-0 -translate-x-1/2 font-mono text-xs font-black px-1.5 py-0.5 bg-[#FFFFFF] text-[#222D2C] border border-[#222D2C] shadow-sm leading-none"
               style={{
                 left: `${Math.max(14, Math.min(window.innerWidth, x))}px`,
               }}
@@ -2020,7 +2020,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
           {rowCenters.map(({ row, y }) => (
             <div
               key={`sticky-row-${row}`}
-              className="absolute left-0 -translate-y-1/2 font-mono text-[10px] font-black px-1.5 py-0.5 bg-[#FFFFFF] text-[#222D2C] border border-[#222D2C] shadow-sm leading-none"
+              className="absolute left-0 -translate-y-1/2 font-mono text-xs font-black px-1.5 py-0.5 bg-[#FFFFFF] text-[#222D2C] border border-[#222D2C] shadow-sm leading-none"
               style={{
                 top: `${Math.max(14, y)}px`,
               }}
@@ -2078,12 +2078,12 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
 
         {/* Calibration Inspector HUD Bar */}
         {calibratedPoint && (
-          <div className="absolute top-2 left-1/2 -translate-x-1/2 z-40 bg-[#FFFFFF] border-2 border-[#222D2C] p-2 shadow-xl font-mono text-[10px] flex items-center gap-3">
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 z-40 bg-[#FFFFFF] border-2 border-[#222D2C] p-2 shadow-xl font-mono text-xs flex items-center gap-3">
             <div className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 bg-[#D35B50] rounded-full animate-ping inline-block" />
+              <span className="w-2.5 h-2.5 bg-[#DF4C40] rounded-full animate-ping inline-block" />
               <span className="font-bold text-[#222D2C]">PIN DROPPED:</span>
-              <span className="bg-[#F4D35A] px-1 py-0.2 font-black">CELL [{calibratedPoint.cell}]</span>
-              <span className="text-[#1A66A6] font-bold">LAT: {calibratedPoint.lat}°N, LNG: {Math.abs(calibratedPoint.lng)}°W</span>
+              <span className="bg-[#FAD13E] px-1 py-0.2 font-black">CELL [{calibratedPoint.cell}]</span>
+              <span className="text-[#005EAC] font-bold">LAT: {calibratedPoint.lat}°N, LNG: {Math.abs(calibratedPoint.lng)}°W</span>
             </div>
             <button
               onClick={() => {
@@ -2092,7 +2092,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
                 setCopiedNotification(true);
                 setTimeout(() => setCopiedNotification(false), 2000);
               }}
-              className="bg-[#1A66A6] hover:bg-[#145082] text-white px-2 py-0.5 font-bold uppercase cursor-pointer text-[9px] flex items-center gap-1"
+              className="bg-[#005EAC] hover:bg-[#004B8A] text-white px-2 py-0.5 font-bold uppercase cursor-pointer text-xs flex items-center gap-1"
             >
               {copiedNotification ? "✓ COPIED!" : "📋 COPY GPS"}
             </button>
@@ -2106,13 +2106,13 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
         )}
 
         {/* Top Right Controls: Zoom, Calibrate & Live Weather */}
-        <div className="absolute top-2 right-2 z-25 flex flex-col items-end gap-1 font-mono text-[9px]">
+        <div className="absolute top-2 right-2 z-25 flex flex-col items-end gap-1 font-mono text-xs">
           <div className="flex gap-1">
             <button
               onClick={() => setIsCalibrating(!isCalibrating)}
               className={cn(
-                "px-2 h-6 border flex items-center justify-center font-bold text-[9px] cursor-pointer shadow-sm gap-1 uppercase",
-                isCalibrating ? "bg-[#D35B50] text-white border-[#D35B50]" : "bg-[#FFFFFF] text-[#222D2C] border-[#222D2C] hover:bg-[#EFECE6]"
+                "px-2 h-6 border flex items-center justify-center font-bold text-xs cursor-pointer shadow-sm gap-1 uppercase",
+                isCalibrating ? "bg-[#DF4C40] text-white border-[#DF4C40]" : "bg-[#FFFFFF] text-[#222D2C] border-[#222D2C] hover:bg-[#EFECE6]"
               )}
               title="Click anywhere on the map to get exact GPS coordinates"
             >
@@ -2165,10 +2165,10 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
           </div>
 
           <div className="bg-[#FFFFFF]/95 border border-[#222D2C] p-1.5 shadow-md flex items-center gap-2 text-[#222D2C]">
-            <CloudSun size={15} className="text-[#F39D22]" />
+            <CloudSun size={15} className="text-[#FF9600]" />
             <div>
-              <div className="font-bold text-[10px] leading-none">MONTCLAIR: 74°F</div>
-              <div className="text-[8px] text-[#5B6360] mt-0.5">HUMIDITY: 48% // 30.12 inHg</div>
+              <div className="font-bold text-xs leading-none">MONTCLAIR: 74°F</div>
+              <div className="text-xs text-[#5B6360] mt-0.5">HUMIDITY: 48% // 30.12 inHg</div>
             </div>
           </div>
         </div>
@@ -2176,30 +2176,30 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
         {/* ─── DETAILED MODAL TOOLTIP / MINI WIKIPEDIA ENTRY CARD ──── */}
         {selectedFeature && (
           <div 
-            className="absolute bottom-4 right-4 z-40 w-88 max-w-[calc(100vw-32px)] bg-[#FFFFFF] border-2 border-[#222D2C] p-3 shadow-2xl font-mono text-[10px] animate-in fade-in zoom-in duration-150 max-h-[85vh] overflow-y-auto"
+            className="absolute bottom-4 right-4 z-40 w-88 max-w-[calc(100vw-32px)] bg-[#FFFFFF] border-2 border-[#222D2C] p-3 shadow-2xl font-mono text-xs animate-in fade-in zoom-in duration-150 max-h-[85vh] overflow-y-auto"
             style={{ boxShadow: "4px 4px 0px 0px rgba(0,0,0,0.35)" }}
           >
             {/* Header with Wikipedia Badge */}
             <div className="flex justify-between items-start border-b border-[#222D2C] pb-2 mb-2">
               <div>
                 <div className="flex items-center gap-1.5 mb-1">
-                  <span className={cn("text-[8px] font-bold px-1.5 py-0.2 uppercase text-white", selectedFeature.badgeBg)}>
+                  <span className={cn("text-xs font-bold px-1.5 py-0.2 uppercase text-white", selectedFeature.badgeBg)}>
                     {selectedFeature.subCategory}
                   </span>
                   {selectedFeature.wikipediaUrl && (
-                    <span className="text-[8px] font-bold bg-[#EFECE6] border border-[#222D2C] px-1 py-0.2 text-[#222D2C] flex items-center gap-1">
+                    <span className="text-xs font-bold bg-[#EFECE6] border border-[#222D2C] px-1 py-0.2 text-[#222D2C] flex items-center gap-1">
                       <span className="font-serif font-black">W</span> MINI WIKIPEDIA ENTRY
                     </span>
                   )}
                 </div>
                 <h3 className="font-bold text-xs text-[#222D2C] leading-tight">{selectedFeature.name}</h3>
                 {selectedFeature.scientificName && (
-                  <div className="italic text-[10px] text-[#1A66A6] font-serif font-bold mt-0.5">
+                  <div className="italic text-xs text-[#005EAC] font-serif font-bold mt-0.5">
                     {selectedFeature.scientificName}
                   </div>
                 )}
                 {wikiDescription && (
-                  <div className="text-[9px] text-[#5B6360] font-sans mt-0.5 leading-tight">
+                  <div className="text-xs text-[#5B6360] font-sans mt-0.5 leading-tight">
                     {wikiDescription}
                   </div>
                 )}
@@ -2221,17 +2221,17 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
                   alt={selectedFeature.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-1 right-1 bg-black/75 text-white text-[7px] px-1 py-0.2 font-mono">
+                <div className="absolute bottom-1 right-1 bg-black/75 text-white text-xs px-1.5 py-0.5 font-mono">
                   WIKIMEDIA COMMONS
                 </div>
               </div>
             )}
 
             {/* Mini Wikipedia Lead Summary / Extract */}
-            <div className="p-2 bg-[#EFECE6] border border-[#222D2C] mb-2 font-sans text-[10px] leading-relaxed text-[#222D2C]">
+            <div className="p-2 bg-[#EFECE6] border border-[#222D2C] mb-2 font-sans text-xs leading-relaxed text-[#222D2C]">
               {isWikiLoading ? (
-                <div className="flex items-center gap-1.5 text-[#5B6360] font-mono text-[9px] py-1">
-                  <span className="w-2 h-2 bg-[#1A66A6] rounded-full animate-ping" />
+                <div className="flex items-center gap-1.5 text-[#5B6360] font-mono text-xs py-1">
+                  <span className="w-2 h-2 bg-[#005EAC] rounded-full animate-ping" />
                   <span>Loading live Wikipedia summary...</span>
                 </div>
               ) : wikiExtract ? (
@@ -2243,19 +2243,19 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
 
             {/* Botanical Foraging Traits */}
             {selectedFeature.season && (
-              <div className="p-1.5 bg-[#FFFFFF] border border-[#222D2C] mb-2 flex justify-between items-center text-[9px] font-mono">
+              <div className="p-1.5 bg-[#FFFFFF] border border-[#222D2C] mb-2 flex justify-between items-center text-xs font-mono">
                 <span className="font-bold text-[#8F57CB]">HARVEST SEASON:</span>
                 <span className="font-bold text-[#222D2C] bg-[#EFECE6] px-1.5 py-0.5">{selectedFeature.season}</span>
               </div>
             )}
 
             {/* Grid Coordinates & Geographic Placement */}
-            <div className="text-[8px] text-[#5B6360] mb-2.5 flex justify-between items-center border-t border-[#222D2C]/15 pt-1.5 font-mono">
-              <span className="bg-[#F4D35A] text-[#222D2C] px-1 py-0.2 font-bold">CELL [{selectedFeature.gridRef}]</span>
+            <div className="text-xs text-[#5B6360] mb-2.5 flex justify-between items-center border-t border-[#222D2C]/15 pt-1.5 font-mono">
+              <span className="bg-[#FAD13E] text-[#222D2C] px-1 py-0.2 font-bold">CELL [{selectedFeature.gridRef}]</span>
               <span>{selectedFeature.lat.toFixed(5)}°N, {Math.abs(selectedFeature.lng).toFixed(5)}°W</span>
             </div>
 
-                        {/* Related TAZ OS Module Link */}
+                        {/* Related CAZ OS Module Link */}
             {(() => {
               const related = getRelatedOsSection(selectedFeature);
               if (!related) return null;
@@ -2264,9 +2264,9 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
                   onClick={() => {
                     window.dispatchEvent(new CustomEvent("taz-navigate-section", { detail: { sectionId: related.id } }));
                   }}
-                  className="w-full mb-2 bg-[#222D2C] hover:bg-[#1A66A6] text-white p-1.5 text-[9px] font-bold uppercase flex items-center justify-between gap-1 cursor-pointer transition-colors border border-[#222D2C]"
+                  className="w-full mb-2 bg-[#222D2C] hover:bg-[#005EAC] text-white p-1.5 text-xs font-bold uppercase flex items-center justify-between gap-1 cursor-pointer transition-colors border border-[#222D2C]"
                 >
-                  <span className="flex items-center gap-1.5 text-[#F4D35A]">
+                  <span className="flex items-center gap-1.5 text-[#FAD13E]">
                     <span>⚡ RELATED OS MODULE:</span>
                     <span className="text-white font-bold">{related.label}</span>
                   </span>
@@ -2281,7 +2281,7 @@ export const TonerMap: React.FC<{ isFullscreen?: boolean }> = ({ isFullscreen = 
                 href={selectedFeature.wikipediaUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full bg-[#1A66A6] hover:bg-[#145082] text-white py-1.5 px-2 text-[9px] font-bold uppercase flex items-center justify-center gap-1.5 cursor-pointer no-underline border border-[#222D2C] transition-colors"
+                className="w-full bg-[#005EAC] hover:bg-[#004B8A] text-white py-1.5 px-2 text-xs font-bold uppercase flex items-center justify-center gap-1.5 cursor-pointer no-underline border border-[#222D2C] transition-colors"
               >
                 <span>Open Full Wikipedia Article</span>
                 <ExternalLink size={11} />
@@ -2323,9 +2323,9 @@ function LayerRow({
         <div className={cn("w-4 h-4 flex items-center justify-center shrink-0 text-white", color, textColor)}>
           {icon}
         </div>
-        <span className="font-bold text-[9px] text-[#222D2C] truncate">{label}</span>
+        <span className="font-bold text-xs text-[#222D2C] truncate">{label}</span>
       </div>
-      <span className="font-mono text-[8px] bg-[#EFECE6] border border-[#222D2C] px-1 py-0.2 shrink-0 font-bold">
+      <span className="font-mono text-xs bg-[#EFECE6] border border-[#222D2C] px-1 py-0.2 shrink-0 font-bold">
         {count}
       </span>
     </div>

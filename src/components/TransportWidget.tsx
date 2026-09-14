@@ -168,6 +168,7 @@ interface TransportCardProps {
   isExpanded?: boolean;
   onToggleExpand?: () => void;
   onHelpClick?: (e: React.MouseEvent) => void;
+  dragHandleProps?: React.HTMLAttributes<HTMLButtonElement>;
 }
 
 export function TransportCard({
@@ -178,7 +179,8 @@ export function TransportCard({
   onToggleShade,
   isExpanded = false,
   onToggleExpand,
-  onHelpClick
+  onHelpClick,
+  dragHandleProps
 }: TransportCardProps) {
   const [activeTab, setActiveTab] = useState<"requests" | "offers">("requests");
   const [typeFilter, setTypeFilter] = useState<"all" | "passage" | "delivery">("all");
@@ -208,8 +210,9 @@ export function TransportCard({
         onClickCapture={onHelpClick}
         title="Transport & Rideshare Dispatch"
         accentColor="bg-[#0F5257] text-white"
+        dragHandleProps={dragHandleProps}
         badge={
-          <span className="text-[9px] font-mono uppercase bg-white/20 px-1.5 py-0.2 font-bold">
+          <span className="text-xs font-mono uppercase bg-white/20 px-1.5 py-0.2 font-bold">
             {requestCount} REQS // {offerCount} OFFERS
           </span>
         }
@@ -219,7 +222,7 @@ export function TransportCard({
               e.stopPropagation();
               setIsPostModalOpen(true);
             }}
-            className="bg-[#FFFFFF] hover:bg-[#EFECE6] text-[#222D2C] px-2 py-0.5 font-mono text-[10px] font-bold uppercase flex items-center gap-1 cursor-pointer border border-[#222D2C] h-[22px] transition-colors"
+            className="bg-[#FFFFFF] hover:bg-[#EFECE6] text-[#222D2C] px-2 py-0.5 font-mono text-xs font-bold uppercase flex items-center gap-1 cursor-pointer border border-[#222D2C] h-[22px] transition-colors"
             style={{ borderRadius: 0 }}
             title="Post a ride need or delivery item"
           >
@@ -233,7 +236,7 @@ export function TransportCard({
         onToggleExpand={onToggleExpand}
       >
         {notification && (
-          <div className="bg-[#54C93F] text-white px-2 py-1 font-mono text-[9px] font-bold uppercase flex items-center justify-between animate-in fade-in">
+          <div className="bg-[#3CCC23] text-white px-2 py-1 font-mono text-xs font-bold uppercase flex items-center justify-between animate-in fade-in">
             <span>✓ {notification}</span>
             <button onClick={() => setNotification(null)} className="cursor-pointer">✕</button>
           </div>
@@ -244,7 +247,7 @@ export function TransportCard({
           <button
             onClick={() => setActiveTab("requests")}
             className={cn(
-              "flex-1 py-1 px-2 text-[10px] font-bold uppercase tracking-wider transition-colors border-none cursor-pointer flex items-center justify-center gap-1.5 font-mono leading-normal h-[28px]",
+              "flex-1 py-1 px-2 text-xs font-bold uppercase tracking-wider transition-colors border-none cursor-pointer flex items-center justify-center gap-1.5 font-mono leading-normal h-[28px]",
               activeTab === "requests" ? "bg-[#0F5257] text-white" : "bg-transparent text-[#5B6360] hover:text-[#222D2C]"
             )}
             style={{ borderRadius: 0 }}
@@ -255,7 +258,7 @@ export function TransportCard({
           <button
             onClick={() => setActiveTab("offers")}
             className={cn(
-              "flex-1 py-1 px-2 text-[10px] font-bold uppercase tracking-wider transition-colors border-none cursor-pointer flex items-center justify-center gap-1.5 font-mono leading-normal h-[28px]",
+              "flex-1 py-1 px-2 text-xs font-bold uppercase tracking-wider transition-colors border-none cursor-pointer flex items-center justify-center gap-1.5 font-mono leading-normal h-[28px]",
               activeTab === "offers" ? "bg-[#0F5257] text-white" : "bg-transparent text-[#5B6360] hover:text-[#222D2C]"
             )}
             style={{ borderRadius: 0 }}
@@ -266,7 +269,7 @@ export function TransportCard({
         </div>
 
         {/* Filter Bar: Type & Timing */}
-        <div className="flex items-center justify-between gap-1 mb-2 font-mono text-[9px] overflow-x-auto pb-0.5 shrink-0">
+        <div className="flex items-center justify-between gap-1 mb-2 font-mono text-xs overflow-x-auto pb-0.5 shrink-0">
           <div className="flex items-center gap-1">
             <span className="font-bold text-[#5B6360] uppercase">TYPE:</span>
             <button
@@ -313,7 +316,7 @@ export function TransportCard({
               onClick={() => setTimingFilter("scheduled")}
               className={cn(
                 "px-1.5 py-0.5 border font-bold uppercase cursor-pointer transition-colors flex items-center gap-0.5",
-                timingFilter === "scheduled" ? "bg-[#1A66A6] text-white border-[#1A66A6]" : "bg-white text-[#222D2C] border-[#222D2C]"
+                timingFilter === "scheduled" ? "bg-[#005EAC] text-white border-[#005EAC]" : "bg-white text-[#222D2C] border-[#222D2C]"
               )}
               title="Set scheduled time"
             >
@@ -323,7 +326,7 @@ export function TransportCard({
               onClick={() => setTimingFilter("anytime")}
               className={cn(
                 "px-1.5 py-0.5 border font-bold uppercase cursor-pointer transition-colors flex items-center gap-0.5",
-                timingFilter === "anytime" ? "bg-[#54C93F] text-white border-[#54C93F]" : "bg-white text-[#222D2C] border-[#222D2C]"
+                timingFilter === "anytime" ? "bg-[#3CCC23] text-white border-[#3CCC23]" : "bg-white text-[#222D2C] border-[#222D2C]"
               )}
               title="Flexible / anytime dispatch"
             >
@@ -349,47 +352,47 @@ export function TransportCard({
                   <div className="flex justify-between items-start gap-1 mb-1">
                     <div className="flex items-center gap-1 flex-wrap">
                       <span className={cn(
-                        "text-[8px] font-mono font-bold px-1.5 py-0.2 uppercase flex items-center gap-1",
-                        item.type === "passage" ? "bg-[#0F5257] text-white" : "bg-[#F39D22] text-white"
+                        "text-xs font-mono font-bold px-1.5 py-0.2 uppercase flex items-center gap-1",
+                        item.type === "passage" ? "bg-[#0F5257] text-white" : "bg-[#FF9600] text-white"
                       )}>
                         {item.type === "passage" ? <Users size={10} /> : <Package size={10} />}
                         <span>{item.type === "passage" ? "PASSAGE" : "DELIVERY"}</span>
                       </span>
 
                       <span className={cn(
-                        "text-[8px] font-mono font-bold px-1.5 py-0.2 uppercase border",
+                        "text-xs font-mono font-bold px-1.5 py-0.2 uppercase border",
                         item.destinationType === "community" 
                           ? "bg-[#EFECE6] text-[#0F5257] border-[#0F5257]" 
-                          : "bg-[#1A66A6]/10 text-[#1A66A6] border-[#1A66A6]"
+                          : "bg-[#005EAC]/10 text-[#005EAC] border-[#005EAC]"
                       )}>
                         {item.destinationType === "community" ? "LOCAL ZONE" : "CITY TRANSIT"}
                       </span>
 
                       {item.timingType === "scheduled" ? (
-                        <span className="text-[8px] font-mono font-bold px-1 py-0.2 bg-[#1A66A6] text-white flex items-center gap-0.5">
+                        <span className="text-xs font-mono font-bold px-1 py-0.2 bg-[#005EAC] text-white flex items-center gap-0.5">
                           <Clock size={9} /> {item.timingDetails}
                         </span>
                       ) : (
-                        <span className="text-[8px] font-mono font-bold px-1 py-0.2 bg-[#54C93F] text-white flex items-center gap-0.5">
+                        <span className="text-xs font-mono font-bold px-1 py-0.2 bg-[#3CCC23] text-white flex items-center gap-0.5">
                           ANYTIME
                         </span>
                       )}
                     </div>
 
-                    <span className="text-[8px] font-mono text-[#5B6360] bg-[#EFECE6] px-1 py-0.2 border border-[#222D2C]/20 shrink-0">
+                    <span className="text-xs font-mono text-[#454C4A] bg-[#EFECE6] px-1 py-0.2 border border-[#222D2C]/20 shrink-0">
                       {item.timestamp}
                     </span>
                   </div>
 
                   {/* Title & Route */}
-                  <div className="font-bold text-[11px] text-[#222D2C] leading-tight mb-1">
+                  <div className="font-bold text-xs text-[#222D2C] leading-tight mb-1">
                     {item.title}
                   </div>
 
                   {/* Origin to Destination Route Indicator */}
-                  <div className="p-1 bg-[#EFECE6] border border-[#222D2C]/40 font-mono text-[9px] flex items-center justify-between gap-1 mb-1">
+                  <div className="p-1 bg-[#EFECE6] border border-[#222D2C]/40 font-mono text-xs flex items-center justify-between gap-1 mb-1">
                     <div className="flex items-center gap-1 min-w-0 text-[#5B6360]">
-                      <MapPin size={10} className="text-[#D35B50] shrink-0" />
+                      <MapPin size={10} className="text-[#DF4C40] shrink-0" />
                       <span className="truncate">{item.origin}</span>
                     </div>
                     <ArrowRight size={10} className="text-[#0F5257] shrink-0" />
@@ -400,26 +403,26 @@ export function TransportCard({
                   </div>
 
                   {/* Notes / Specs */}
-                  <div className="font-mono text-[9px] text-[#5B6360] flex items-center justify-between">
+                  <div className="font-mono text-xs text-[#5B6360] flex items-center justify-between">
                     <span>CAPACITY: <strong className="text-[#222D2C]">{item.specs}</strong></span>
                     {item.gridRef && (
-                      <span className="text-[8px] font-bold bg-white border border-[#222D2C] px-1 py-0.2 text-[#0F5257]">
+                      <span className="text-xs font-bold bg-white border border-[#222D2C] px-1 py-0.2 text-[#0F5257]">
                         GRID [{item.gridRef}]
                       </span>
                     )}
                   </div>
                   {item.notes && (
-                    <p className="text-[9px] text-[#5B6360] font-sans mt-0.5 leading-snug line-clamp-1">
+                    <p className="text-xs text-[#5B6360] font-sans mt-0.5 leading-snug line-clamp-1">
                       {item.notes}
                     </p>
                   )}
                 </div>
 
                 {/* Footer Action */}
-                <div className="pt-1.5 border-t border-[#222D2C]/15 flex justify-between items-center font-mono text-[9px]">
+                <div className="pt-1.5 border-t border-[#222D2C]/15 flex justify-between items-center font-mono text-xs">
                   <span className="text-[#0F5257] font-bold truncate">BY: {item.user}</span>
                   {item.claimed ? (
-                    <span className="text-[#54C93F] font-bold flex items-center gap-1">
+                    <span className="text-[#3CCC23] font-bold flex items-center gap-1">
                       <Check size={11} /> COORDINATED
                     </span>
                   ) : (
@@ -438,7 +441,7 @@ export function TransportCard({
               </div>
             ))
           ) : (
-            <div className="p-4 text-center bg-[#EFECE6] border border-[#222D2C] font-mono text-[10px] text-[#5B6360]">
+            <div className="p-4 text-center bg-[#EFECE6] border border-[#222D2C] font-mono text-xs text-[#5B6360]">
               No transport listings match the active filters.
             </div>
           )}
@@ -533,13 +536,13 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
           {/* Post Mode & Category */}
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="text-[10px] font-bold text-[#5B6360] uppercase block mb-1">POSTING AS:</label>
+              <label className="text-xs font-bold text-[#5B6360] uppercase block mb-1">POSTING AS:</label>
               <div className="flex border border-[#222D2C]">
                 <button
                   type="button"
                   onClick={() => setMode("request")}
                   className={cn(
-                    "flex-1 py-1 text-[10px] font-bold uppercase transition-colors cursor-pointer",
+                    "flex-1 py-1 text-xs font-bold uppercase transition-colors cursor-pointer",
                     mode === "request" ? "bg-[#0F5257] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
@@ -549,7 +552,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                   type="button"
                   onClick={() => setMode("offer")}
                   className={cn(
-                    "flex-1 py-1 text-[10px] font-bold uppercase transition-colors cursor-pointer",
+                    "flex-1 py-1 text-xs font-bold uppercase transition-colors cursor-pointer",
                     mode === "offer" ? "bg-[#0F5257] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
@@ -559,7 +562,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
             </div>
 
             <div>
-              <label className="text-[10px] font-bold text-[#5B6360] uppercase block mb-1">TRANSPORT CATEGORY:</label>
+              <label className="text-xs font-bold text-[#5B6360] uppercase block mb-1">TRANSPORT CATEGORY:</label>
               <div className="flex border border-[#222D2C]">
                 <button
                   type="button"
@@ -568,7 +571,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                     setSpecs("1 Passenger");
                   }}
                   className={cn(
-                    "flex-1 py-1 text-[10px] font-bold uppercase transition-colors cursor-pointer flex items-center justify-center gap-1",
+                    "flex-1 py-1 text-xs font-bold uppercase transition-colors cursor-pointer flex items-center justify-center gap-1",
                     type === "passage" ? "bg-[#0F5257] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
@@ -581,8 +584,8 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                     setSpecs("Medium Box (10kg)");
                   }}
                   className={cn(
-                    "flex-1 py-1 text-[10px] font-bold uppercase transition-colors cursor-pointer flex items-center justify-center gap-1",
-                    type === "delivery" ? "bg-[#F39D22] text-white" : "bg-white text-[#222D2C]"
+                    "flex-1 py-1 text-xs font-bold uppercase transition-colors cursor-pointer flex items-center justify-center gap-1",
+                    type === "delivery" ? "bg-[#FF9600] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
                   <Package size={11} /> Delivery
@@ -593,7 +596,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
 
           {/* Title */}
           <div>
-            <label className="text-[10px] font-bold text-[#5B6360] uppercase block mb-1">
+            <label className="text-xs font-bold text-[#5B6360] uppercase block mb-1">
               {type === "passage" ? "PASSAGE TITLE / PURPOSE:" : "CARGO DESCRIPTION / TITLE:"}
             </label>
             <input
@@ -609,8 +612,8 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
           {/* Destination Type & Destination Picker */}
           <div className="space-y-1.5 p-2 bg-[#EFECE6] border border-[#222D2C]">
             <div className="flex justify-between items-center">
-              <label className="text-[10px] font-bold text-[#222D2C] uppercase">DESTINATION BOUNDS:</label>
-              <div className="flex border border-[#222D2C] text-[9px]">
+              <label className="text-xs font-bold text-[#222D2C] uppercase">DESTINATION BOUNDS:</label>
+              <div className="flex border border-[#222D2C] text-xs">
                 <button
                   type="button"
                   onClick={() => {
@@ -632,7 +635,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                   }}
                   className={cn(
                     "px-2 py-0.5 font-bold uppercase cursor-pointer",
-                    destinationType === "city" ? "bg-[#1A66A6] text-white" : "bg-white text-[#222D2C]"
+                    destinationType === "city" ? "bg-[#005EAC] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
                   Destination City
@@ -657,7 +660,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                   <option value="Nishuane Springhouse [H4]">Nishuane Park Springhouse [H4]</option>
                   <option value="All Community Bounds [A-H]">Anywhere within Community Bounds [A-H]</option>
                 </select>
-                <div className="text-[9px] text-[#5B6360]">
+                <div className="text-xs text-[#5B6360]">
                   Includes fixed 500m letter/number grid coordinates calibrated to local Toner cartography.
                 </div>
               </div>
@@ -689,7 +692,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
           {/* Origin & Specs */}
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="text-[10px] font-bold text-[#5B6360] uppercase block mb-1">ORIGIN / PICKUP AREA:</label>
+              <label className="text-xs font-bold text-[#5B6360] uppercase block mb-1">ORIGIN / PICKUP AREA:</label>
               <input
                 type="text"
                 required
@@ -699,7 +702,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
               />
             </div>
             <div>
-              <label className="text-[10px] font-bold text-[#5B6360] uppercase block mb-1">
+              <label className="text-xs font-bold text-[#5B6360] uppercase block mb-1">
                 {type === "passage" ? "PASSENGERS / SEATS:" : "CARGO WEIGHT & SIZE:"}
               </label>
               <input
@@ -716,14 +719,14 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
           {/* Timing: Set Time vs Anytime */}
           <div className="p-2 bg-[#EFECE6] border border-[#222D2C] space-y-1.5">
             <div className="flex justify-between items-center">
-              <label className="text-[10px] font-bold text-[#222D2C] uppercase">TIMING REQUIREMENT:</label>
-              <div className="flex border border-[#222D2C] text-[9px]">
+              <label className="text-xs font-bold text-[#222D2C] uppercase">TIMING REQUIREMENT:</label>
+              <div className="flex border border-[#222D2C] text-xs">
                 <button
                   type="button"
                   onClick={() => setTimingType("scheduled")}
                   className={cn(
                     "px-2 py-0.5 font-bold uppercase cursor-pointer flex items-center gap-1",
-                    timingType === "scheduled" ? "bg-[#1A66A6] text-white" : "bg-white text-[#222D2C]"
+                    timingType === "scheduled" ? "bg-[#005EAC] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
                   <Clock size={10} /> Set Time
@@ -733,7 +736,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                   onClick={() => setTimingType("anytime")}
                   className={cn(
                     "px-2 py-0.5 font-bold uppercase cursor-pointer flex items-center gap-1",
-                    timingType === "anytime" ? "bg-[#54C93F] text-white" : "bg-white text-[#222D2C]"
+                    timingType === "anytime" ? "bg-[#3CCC23] text-white" : "bg-white text-[#222D2C]"
                   )}
                 >
                   Anytime / Flexible
@@ -752,7 +755,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
                 />
               </div>
             ) : (
-              <div className="text-[10px] text-[#5B6360]">
+              <div className="text-xs text-[#5B6360]">
                 Flexible delivery or passage. Can be fulfilled anytime within the next 24 to 48 hours.
               </div>
             )}
@@ -760,7 +763,7 @@ export function TransportPostDialog({ isOpen, onClose, onSubmit }: TransportPost
 
           {/* Notes */}
           <div>
-            <label className="text-[10px] font-bold text-[#5B6360] uppercase block mb-1">COORDINATION NOTES / BARTER / DETAILS:</label>
+            <label className="text-xs font-bold text-[#5B6360] uppercase block mb-1">COORDINATION NOTES / BARTER / DETAILS:</label>
             <input
               type="text"
               placeholder="e.g. Can trade solar battery charging, heavy lifting help, or fresh produce."
@@ -830,7 +833,7 @@ export function TransportExpandedView({ entries, onAddEntry, onClaimEntry }: Tra
         <div className="flex items-center gap-2">
           <Car size={18} />
           <span className="font-bold text-sm uppercase">PEER-TO-PEER TRANSPORT & CARGO DISPATCH</span>
-          <span className="text-[10px] bg-white/20 px-2 py-0.5">
+          <span className="text-xs bg-white/20 px-2 py-0.5">
             {entries.length} ACTIVE RUNS // OFFLINE MESH DISPATCH
           </span>
         </div>
@@ -845,7 +848,7 @@ export function TransportExpandedView({ entries, onAddEntry, onClaimEntry }: Tra
       {/* Filter and Search Bar */}
       <div className="p-3 bg-white border-2 border-[#222D2C] flex flex-wrap items-center justify-between gap-3 shadow-sm">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="font-bold text-[#5B6360] uppercase text-[10px]">CATEGORY:</span>
+          <span className="font-bold text-[#5B6360] uppercase text-xs">CATEGORY:</span>
           {["all", "passage", "delivery"].map((tab) => (
             <button
               key={tab}
@@ -859,21 +862,21 @@ export function TransportExpandedView({ entries, onAddEntry, onClaimEntry }: Tra
             </button>
           ))}
 
-          <span className="font-bold text-[#5B6360] uppercase text-[10px] ml-2">TIMING:</span>
+          <span className="font-bold text-[#5B6360] uppercase text-xs ml-2">TIMING:</span>
           {["all", "scheduled", "anytime"].map((t) => (
             <button
               key={t}
               onClick={() => setTimingFilter(t as any)}
               className={cn(
                 "px-2.5 py-1 font-bold uppercase border cursor-pointer transition-colors",
-                timingFilter === t ? "bg-[#1A66A6] text-white border-[#1A66A6]" : "bg-white text-[#222D2C] border-[#222D2C]"
+                timingFilter === t ? "bg-[#005EAC] text-white border-[#005EAC]" : "bg-white text-[#222D2C] border-[#222D2C]"
               )}
             >
               {t === "all" ? "ALL" : t === "scheduled" ? "SET TIME" : "ANYTIME"}
             </button>
           ))}
 
-          <span className="font-bold text-[#5B6360] uppercase text-[10px] ml-2">DESTINATION:</span>
+          <span className="font-bold text-[#5B6360] uppercase text-xs ml-2">DESTINATION:</span>
           {["all", "community", "city"].map((s) => (
             <button
               key={s}
@@ -907,32 +910,32 @@ export function TransportExpandedView({ entries, onAddEntry, onClaimEntry }: Tra
               <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-1.5 flex-wrap">
                   <span className={cn(
-                    "text-[9px] font-bold px-2 py-0.5 uppercase text-white flex items-center gap-1",
-                    item.type === "passage" ? "bg-[#0F5257]" : "bg-[#F39D22]"
+                    "text-xs font-bold px-2 py-0.5 uppercase text-white flex items-center gap-1",
+                    item.type === "passage" ? "bg-[#0F5257]" : "bg-[#FF9600]"
                   )}>
                     {item.type === "passage" ? <Users size={11} /> : <Package size={11} />}
                     <span>{item.type === "passage" ? "PASSAGE NEED" : "DELIVERY NEED"}</span>
                   </span>
 
                   <span className={cn(
-                    "text-[9px] font-bold px-1.5 py-0.5 uppercase border",
-                    item.destinationType === "community" ? "bg-[#EFECE6] text-[#0F5257] border-[#0F5257]" : "bg-[#1A66A6]/10 text-[#1A66A6] border-[#1A66A6]"
+                    "text-xs font-bold px-1.5 py-0.5 uppercase border",
+                    item.destinationType === "community" ? "bg-[#EFECE6] text-[#0F5257] border-[#0F5257]" : "bg-[#005EAC]/10 text-[#005EAC] border-[#005EAC]"
                   )}>
                     {item.destinationType === "community" ? "COMMUNITY BOUNDS" : "REGIONAL CITY"}
                   </span>
 
                   {item.timingType === "scheduled" ? (
-                    <span className="text-[9px] font-bold px-2 py-0.5 bg-[#1A66A6] text-white flex items-center gap-1">
+                    <span className="text-xs font-bold px-2 py-0.5 bg-[#005EAC] text-white flex items-center gap-1">
                       <Clock size={10} /> {item.timingDetails}
                     </span>
                   ) : (
-                    <span className="text-[9px] font-bold px-2 py-0.5 bg-[#54C93F] text-white">
+                    <span className="text-xs font-bold px-2 py-0.5 bg-[#3CCC23] text-white">
                       ANYTIME / FLEXIBLE
                     </span>
                   )}
                 </div>
 
-                <span className="text-[9px] text-[#5B6360] bg-[#EFECE6] px-2 py-0.5 border border-[#222D2C]/20">
+                <span className="text-xs text-[#5B6360] bg-[#EFECE6] px-2 py-0.5 border border-[#222D2C]/20">
                   {item.timestamp}
                 </span>
               </div>
@@ -940,14 +943,14 @@ export function TransportExpandedView({ entries, onAddEntry, onClaimEntry }: Tra
               <h4 className="font-bold text-sm text-[#222D2C] mb-1 font-sans">{item.title}</h4>
 
               <div className="p-2 bg-[#EFECE6] border border-[#222D2C] space-y-1 mb-2">
-                <div className="flex justify-between items-center text-[10px]">
+                <div className="flex justify-between items-center text-xs">
                   <span className="text-[#5B6360]">ORIGIN: <strong className="text-[#222D2C]">{item.origin}</strong></span>
                   <ArrowRight size={12} className="text-[#0F5257]" />
                   <span className="text-[#0F5257] font-bold">DESTINATION: {item.destination}</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center text-[10px] text-[#5B6360] mb-1">
+              <div className="flex justify-between items-center text-xs text-[#5B6360] mb-1">
                 <span>PAYLOAD / SEATS: <strong className="text-[#222D2C]">{item.specs}</strong></span>
                 {item.gridRef && (
                   <span className="font-bold text-[#0F5257] bg-white border border-[#222D2C] px-1.5 py-0.2">
@@ -957,16 +960,16 @@ export function TransportExpandedView({ entries, onAddEntry, onClaimEntry }: Tra
               </div>
 
               {item.notes && (
-                <p className="text-[11px] text-[#3E4846] font-sans leading-relaxed bg-[#FFFFFF] p-1.5 border border-[#222D2C]/20 mt-1">
+                <p className="text-xs text-[#3E4846] font-sans leading-relaxed bg-[#FFFFFF] p-1.5 border border-[#222D2C]/20 mt-1">
                   {item.notes}
                 </p>
               )}
             </div>
 
-            <div className="pt-2 mt-2 border-t border-[#222D2C]/20 flex justify-between items-center text-[10px]">
+            <div className="pt-2 mt-2 border-t border-[#222D2C]/20 flex justify-between items-center text-xs">
               <span className="text-[#0F5257] font-bold">POSTED BY: {item.user}</span>
               {item.claimed ? (
-                <span className="text-[#54C93F] font-bold flex items-center gap-1">
+                <span className="text-[#3CCC23] font-bold flex items-center gap-1">
                   <CheckCircle2 size={13} /> COORDINATED
                 </span>
               ) : (

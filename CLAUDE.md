@@ -1,8 +1,8 @@
-# TAZ OS — Claude Code Guide
+# CAZ OS — Claude Code Guide
 
 ## Project Overview
 
-Temporary Autonomous Zone (TAZ) OS is a mutual aid platform for offline communities. The current build covers **section 2.2 only**: the Peer-to-Peer Mutual Aid Matcher ("Give & Take" board).
+Community Autonomous Zone (CAZ) OS is a mutual aid platform for offline communities. The current build covers **section 2.2 only**: the Peer-to-Peer Mutual Aid Matcher ("Give & Take" board).
 
 ## File Structure
 

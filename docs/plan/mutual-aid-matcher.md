@@ -1,8 +1,8 @@
-# Plan: TAZ Peer-to-Peer Mutual Aid Matcher (Section 2.2)
+# Plan: CAZ Peer-to-Peer Mutual Aid Matcher (Section 2.2)
 
 ## Context
 
-Building the lean MVP for section 2.2 of the TAZ OS blueprint: the **"Give & Take" board** — a peer-to-peer mutual aid matcher that surfaces neighborhood surplus offers ("skills") against active supply requests ("needs"). This is the only feature being built now. The UI uses the brutx neo-brutalist component library (copy-paste Radix + Tailwind components). Data is persisted in flat JSON files on the server.
+Building the lean MVP for section 2.2 of the CAZ OS blueprint: the **"Give & Take" board** — a peer-to-peer mutual aid matcher that surfaces neighborhood surplus offers ("skills") against active supply requests ("needs"). This is the only feature being built now. The UI uses the brutx neo-brutalist component library (copy-paste Radix + Tailwind components). Data is persisted in flat JSON files on the server.
 
 ---
 

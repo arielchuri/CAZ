@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 interface SheetProps {
   isOpen: boolean;
   onClose: () => void;
-  title: string;
+  title?: string;
   children: React.ReactNode;
 }
 
@@ -24,6 +24,9 @@ export const Sheet: React.FC<SheetProps> = ({ isOpen, onClose, title, children }
           />
           {/* Sheet */}
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label={title || "Panel drawer"}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -34,14 +37,17 @@ export const Sheet: React.FC<SheetProps> = ({ isOpen, onClose, title, children }
               boxShadow: "1px 1px 1px 0 rgba(128, 128, 128, 0.25)",
             }}
           >
-            <div className="flex justify-between items-center mb-6 border-b border-[#222D2C] pb-3">
-              <h2 className="text-xl font-extrabold uppercase tracking-tight text-[#222D2C]">
-                {title}
-              </h2>
+            <div className={title ? "flex justify-between items-center mb-5 border-b border-[#222D2C] pb-3" : "flex justify-end items-center mb-4 border-b border-[#222D2C] pb-2"}>
+              {title && (
+                <h2 className="text-xl font-extrabold uppercase tracking-tight text-[#222D2C]">
+                  {title}
+                </h2>
+              )}
               <button
                 onClick={onClose}
-                className="w-8 h-8 flex items-center justify-center bg-transparent border border-[#222D2C] hover:bg-[#D35B50] hover:text-white transition-colors cursor-pointer"
+                className="w-8 h-8 flex items-center justify-center bg-transparent border border-[#222D2C] hover:bg-[#DF4C40] hover:text-white transition-colors cursor-pointer"
                 style={{ borderRadius: 0, boxShadow: "none" }}
+                aria-label="Close"
               >
                 <X size={18} />
               </button>

@@ -12,20 +12,167 @@
   --color-ink-subtle: #909390;
   --color-ink-black: #000000;
   
-  --color-primary: #1A66A6;
-  --color-primary-hover: #145082;
-  --color-primary-dark: #0F3D64;
+  --color-primary: #222D2C;
+  --color-primary-hover: #3E4846;
+  --color-primary-dark: #000000;
   
-  --color-spot-red: #D35B50;
-  --color-spot-orange: #F39D22;
-  --color-spot-yellow: #F4D35A;
-  --color-spot-green: #54C93F;
+  --color-spot-red: #DF4C40;
+  --color-spot-orange: #FF9600;
+  --color-spot-yellow: #FAD13E;
+  --color-spot-green: #3CCC23;
   --color-spot-aqua: #3ABEAE;
-  --color-spot-blue: #1A66A6;
+  --color-spot-blue: #005EAC;
   --color-spot-violet: #8F57CB;
   
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --breakpoint-mobile-max: 999.98px;
+  --breakpoint-tablet: 1000px;
+  --breakpoint-desktop: 1700px;
+  --breakpoint-ultrawide: 2800px;
+}
+
+/* ─── Responsive Dashboard Layout ────────────────────────── */
+/* Base (< 1000px): 1 Column */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dashboard-col-left {
+  width: 100%;
+}
+
+.dashboard-col-right {
+  width: 100%;
+}
+
+.dashboard-subgrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-col-34-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-map-card {
+  height: 380px;
+  min-height: 320px;
+}
+
+/* Titlebar responsive styles: mobile (< 1000px) vs desktop (>= 1000px) */
+.titlebar-mobile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.375rem;
+}
+
+.titlebar-desktop {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 2 Columns: 1000px <= width < 1700px */
+@media (min-width: 1000px) {
+  .titlebar-mobile {
+    display: none;
+  }
+  .titlebar-desktop {
+    display: flex;
+  }
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .dashboard-col-left {
+    grid-column: span 1 / span 1;
+  }
+  .dashboard-col-right {
+    grid-column: span 1 / span 1;
+  }
+  .dashboard-subgrid {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard-col-34-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .dashboard-map-card {
+    height: 560px;
+    min-height: 500px;
+  }
+}
+
+/* 3 Columns: 1700px <= width < 2800px (Max column width capped at 2400px screen width) */
+@media (min-width: 1700px) {
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    max-width: 2400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .dashboard-col-left {
+    grid-column: span 4 / span 4;
+  }
+  .dashboard-col-right {
+    grid-column: span 8 / span 8;
+  }
+  .dashboard-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboard-col-34-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .dashboard-map-card {
+    height: 560px;
+    min-height: 500px;
+  }
+}
+
+/* 4 Columns: width >= 2800px (4 equal 25% columns, max-width capped at 3200px) */
+@media (min-width: 2800px) {
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    max-width: 3200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .dashboard-col-left {
+    grid-column: span 3 / span 3;
+  }
+  .dashboard-col-right {
+    grid-column: span 9 / span 9;
+  }
+  .dashboard-subgrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .dashboard-col-34-group {
+    display: contents;
+  }
+  .dashboard-map-card {
+    height: 560px;
+    min-height: 500px;
+  }
 }
 
 :root {
@@ -38,35 +185,35 @@
   --surface-subtle: #DFDDD7;
   --surface-knockout: #FFFFFF;
 
-  --primary-color: #1A66A6;       /* Single Printed Matter Blue */
-  --primary-hover: #145082;
-  --secondary-color: #D35B50;     /* Spot Red */
+  --primary-color: #005EAC;       /* Printed Matter Blue */
+  --primary-hover: #004B8A;
+  --secondary-color: #DF4C40;     /* Printed Matter Red */
   
-  --spectrum-red: #D35B50;
-  --spectrum-orange: #F39D22;
-  --spectrum-yellow: #F4D35A;
-  --spectrum-green: #54C93F;
+  --spectrum-red: #DF4C40;
+  --spectrum-orange: #FF9600;
+  --spectrum-yellow: #FAD13E;
+  --spectrum-green: #3CCC23;
   --spectrum-aqua: #3ABEAE;
-  --spectrum-blue: #1A66A6;
+  --spectrum-blue: #005EAC;
   --spectrum-violet: #8F57CB;
 
-  --success-color: #54C93F;
-  --warning-color: #F39D22;
-  --danger-color: #D35B50;
+  --success-color: #3CCC23;
+  --warning-color: #FF9600;
+  --danger-color: #DF4C40;
 
   --gray-50:  #E7E4DF;
   --gray-100: #DFDDD7;
   --gray-200: #CECDC8;
-  --gray-300: #BCBCB8;
+  --gray-300: #BCBCB8;            /* Gray 1 (25% ink coverage) */
   --gray-400: #A1A49F;
-  --gray-500: #909390;
+  --gray-500: #888D89;            /* Gray 2 (50% ink coverage) */
   --gray-600: #707673;
-  --gray-700: #5B6360;
+  --gray-700: #5B6360;            /* Gray 3 (72% ink coverage) */
   --gray-800: #3E4846;
-  --gray-900: #222D2C;            /* Slate Ink */
+  --gray-900: #222D2C;            /* Slate Ink (100% ink) */
 
   --text: #222D2C;
-  --text-muted: #5B6360;
+  --text-muted: #454C4A;
   --border-color: #222D2C;
   --border-hairline: #222D2C;
   --border-subtle: #CECDC8;
@@ -75,12 +222,94 @@
   --font-mono: "JetBrains Mono", monospace;
   
   font-family: var(--base-font-family);
+  font-feature-settings: "zero" 1;
   color: var(--text);
   background-color: var(--white);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Printed Matter Dark Mode ─── */
+/* Inversion: background becomes slate ink (#222D2C), text & strokes become warm paper white (#EFECE6) */
+.dark,
+html.dark {
+  color-scheme: dark;
+  --white: #222D2C;               /* Inverted stock: Slate Ink */
+  --true-white: #000000;
+  --true-black: #FFFFFF;
+  --surface: #222D2C;
+  --surface-muted: #1A2221;
+  --surface-subtle: #2B3736;
+  --surface-knockout: #161D1C;
+
+  --primary-color: #388BFD;       /* High-contrast accessible Blue in dark */
+  --primary-hover: #1A66A6;
+  --secondary-color: #DF4C40;
+
+  --gray-50:  #2B3736;
+  --gray-100: #3E4846;
+  --gray-200: #5B6360;
+  --gray-300: #707673;
+  --gray-400: #888D89;
+  --gray-500: #A1A49F;
+  --gray-600: #BCBCB8;
+  --gray-700: #DFDDD7;
+  --gray-800: #E7E4DF;
+  --gray-900: #EFECE6;            /* Inverted text */
+
+  --text: #EFECE6;                /* Warm paper text */
+  --text-muted: #BCBCB8;
+  --border-color: #5B6360;
+  --border-hairline: #5B6360;
+  --border-subtle: #3E4846;
+}
+
+/* Dark mode utility overrides for hardcoded paper/ink utility classes */
+.dark body {
+  background-color: #1A2221 !important;
+  color: #EFECE6 !important;
+}
+
+.dark .bg-\[\#EFECE6\] {
+  background-color: #1A2221 !important;
+}
+
+.dark .bg-\[\#FFFFFF\],
+.dark .bg-white {
+  background-color: #222D2C !important;
+}
+
+.dark .text-\[\#222D2C\] {
+  color: #EFECE6 !important;
+}
+
+.dark .text-\[\#5B6360\],
+.dark .text-\[\#454C4A\] {
+  color: #BCBCB8 !important;
+}
+
+.dark .border-\[\#222D2C\] {
+  border-color: #5B6360 !important;
+}
+
+.dark .border-\[\#222D2C\]\/10,
+.dark .border-\[\#222D2C\]\/15,
+.dark .border-\[\#222D2C\]\/20,
+.dark .border-\[\#222D2C\]\/30,
+.dark .border-\[\#222D2C\]\/40 {
+  border-color: rgba(239, 236, 230, 0.18) !important;
+}
+
+.dark .bg-dots {
+  background-image: radial-gradient(#EFECE6 1px, transparent 1px) !important;
+}
+
+.dark .bg-grid-hairline {
+  background-image: 
+    linear-gradient(to right, #5B6360 1px, transparent 1px),
+    linear-gradient(to bottom, #5B6360 1px, transparent 1px) !important;
 }
 
 *, *::before, *::after {
@@ -95,6 +324,7 @@ html, body {
   background-color: var(--surface-muted);
   color: var(--text);
   font-family: var(--base-font-family);
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -128,7 +358,7 @@ p {
   background-size: 32px 32px;
 }
 
-/* Printed Matter button active state: flashes green (#54C93F) while held */
+/* Printed Matter button active state: flashes green (#3CCC23) while held */
 button:active {
   background-color: var(--success-color) !important;
   color: #FFFFFF !important;
@@ -161,3 +391,120 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 1px var(--primary-color);
 }
+
+/* ─── Accessibility: Focus Rings ─── */
+:focus-visible {
+  outline: 2px solid #005EAC !important;
+  outline-offset: 2px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #005EAC !important;
+  outline-offset: 2px !important;
+}
+
+/* ─── Accessibility: Large Text Mode ─── */
+/* Scale cleanly across all browsers without breaking layouts */
+html.text-enlarged {
+  font-size: 112% !important;
+}
+
+.text-enlarged {
+  zoom: 1.1;
+}
+
+@supports not (zoom: 1.1) {
+  .text-enlarged {
+    transform: scale(1.05);
+    transform-origin: top center;
+  }
+}
+
+/* Ensure typography across the application scales noticeably */
+.text-enlarged p,
+.text-enlarged span,
+.text-enlarged button,
+.text-enlarged input,
+.text-enlarged select,
+.text-enlarged textarea,
+.text-enlarged label,
+.text-enlarged h1,
+.text-enlarged h2,
+.text-enlarged h3,
+.text-enlarged h4,
+.text-enlarged h5,
+.text-enlarged h6,
+.text-enlarged pre,
+.text-enlarged code {
+  font-size-adjust: 0.58;
+}
+
+/* Step column counts down in Large Text mode so each column stays wide & legible */
+@media (min-width: 1700px) and (max-width: 2799.98px) {
+  /* On desktop screens (1700px-2800px), drop from 3 columns to 2 columns in large text mode */
+  html.text-enlarged .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  html.text-enlarged .dashboard-col-left {
+    grid-column: span 1 / span 1 !important;
+  }
+  html.text-enlarged .dashboard-col-right {
+    grid-column: span 1 / span 1 !important;
+  }
+  html.text-enlarged .dashboard-subgrid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 2800px) {
+  /* On ultrawide screens (>= 2800px), drop from 4 columns to 3 columns in large text mode */
+  html.text-enlarged .dashboard-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+  html.text-enlarged .dashboard-col-left {
+    grid-column: span 4 / span 4 !important;
+  }
+  html.text-enlarged .dashboard-col-right {
+    grid-column: span 8 / span 8 !important;
+  }
+  html.text-enlarged .dashboard-subgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1399.98px) {
+  /* On medium tablet screens (1000px-1400px), drop from 2 columns to 1 column in large text mode */
+  html.text-enlarged .dashboard-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/* ─── Touch Screen Optimization ─── */
+/* Eliminate 300ms tap delay & gray highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch targets: 44px invisible hit area without expanding brutalist visual bounds */
+.touch-target-expand {
+  position: relative;
+}
+.touch-target-expand::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 44px;
+  min-height: 44px;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+
+
