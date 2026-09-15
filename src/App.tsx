@@ -71,6 +71,7 @@ import {
   type TransportEntry, 
   INITIAL_TRANSPORT_ENTRIES 
 } from "./components/TransportWidget";
+import { WelcomeModal } from "./components/WelcomeModal";
 import {
   DndContext,
   closestCorners,
@@ -272,6 +273,15 @@ function App() {
   // Interactive Help Mode State
   const [isHelpMode, setIsHelpMode] = useState(false);
   const [helpOverlay, setHelpOverlay] = useState<{ title: string; sectionId: string } | null>(null);
+
+  // Welcome / Manifesto Pop-Up (triggered on first entry to site, or reopened on demand)
+  const [isWelcomeOpen, setIsWelcomeOpen] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem("caz_welcome_seen") !== "true";
+    } catch {
+      return true;
+    }
+  });
 
   // Accessibility: Large Text Mode (persisted in localStorage)
   const [isLargeText, setIsLargeText] = useState<boolean>(() => {
@@ -1149,12 +1159,19 @@ cd TAZ && npm install && npm run dev
                       </div>
 
                       <div className="flex justify-between items-center pt-1 border-t border-[#222D2C]/15 text-xs">
-                        <span className="text-[#005EAC] font-bold">SECTOR 4 LOCAL PEER MESH</span>
+                        <button 
+                          onClick={() => setIsWelcomeOpen(true)}
+                          className="font-bold text-[#005EAC] hover:underline cursor-pointer flex items-center gap-1"
+                          title="Open 5 Pillars & Architectural Manifesto"
+                        >
+                          <BookOpen size={11} />
+                          <span>5 Pillars Pop-up →</span>
+                        </button>
                         <button 
                           onClick={() => toggleExpand("about")} 
                           className="underline font-bold hover:text-[#005EAC] cursor-pointer"
                         >
-                          {expandedSection === "about" ? "Collapse ↑" : "Full Manifesto & Guide →"}
+                          {expandedSection === "about" ? "Collapse ↑" : "Full Guide →"}
                         </button>
                       </div>
                     </div>
@@ -2206,15 +2223,19 @@ cd TAZ && npm install && npm run dev
       >
         {/* ─── 1-COLUMN SIZE TITLE BAR (< 1000px) ─── */}
         <div className="titlebar-mobile">
-          {/* 1. MESH CAZ */}
-          <div className="flex items-center gap-1 shrink-0">
+          {/* 1. MESH CAZ (Clickable to open Manifesto) */}
+          <button
+            onClick={() => setIsWelcomeOpen(true)}
+            className="flex items-center gap-1 shrink-0 bg-transparent border-none p-0 cursor-pointer text-left hover:opacity-85"
+            title="View CAZ Manifesto & 5 Core Pillars"
+          >
             <span className="font-mono text-xs font-bold px-1.5 py-0.5 bg-black/40 text-white tracking-widest uppercase h-[24px] flex items-center">
               MESH
             </span>
             <span className="text-sm font-black uppercase tracking-tight leading-none text-white">
               CAZ
             </span>
-          </div>
+          </button>
 
           {/* 2. Dropdown for 4 info chips */}
           <Popover.Root>
@@ -2252,6 +2273,19 @@ cd TAZ && npm install && npm run dev
 
           {/* Actions Group: ? for help, Triangle + SOS, Avatar */}
           <div className="flex items-center gap-1.5 shrink-0">
+            {/* Manifesto button for mobile */}
+            <Tip label="CAZ Manifesto & 5 Pillars">
+              <button
+                onClick={() => setIsWelcomeOpen(true)}
+                aria-label="Open CAZ Manifesto"
+                className="w-[24px] h-[24px] flex items-center justify-center bg-white border border-[#222D2C] text-[#005EAC] hover:bg-[#EFECE6] cursor-pointer"
+                style={{ borderRadius: 0 }}
+                title="CAZ Manifesto & 5 Core Pillars"
+              >
+                <BookOpen size={13} />
+              </button>
+            </Tip>
+
             {/* 3. Question mark only for help */}
             <button
               onClick={() => {
@@ -2260,17 +2294,14 @@ cd TAZ && npm install && npm run dev
                 if (!nextState) setHelpOverlay(null);
               }}
               className={cn(
-                "w-[24px] h-[24px] font-mono flex items-center justify-center cursor-pointer border transition-all",
-                isHelpMode 
-                  ? "bg-[#FAD13E] text-[#222D2C] border-[#222D2C] ring-1 ring-[#222D2C]" 
-                  : "bg-[#FFFFFF] text-[#222D2C] border-[#222D2C] hover:bg-[#FAD13E]"
+                "w-[24px] h-[24px] flex items-center justify-center cursor-pointer border font-mono text-xs font-black shadow-sm transition-colors",
+                isHelpMode ? "bg-[#FAD13E] text-[#222D2C] border-[#222D2C] ring-2 ring-[#222D2C]" : "bg-white text-[#222D2C] border-[#222D2C] hover:bg-[#FAD13E]"
               )}
               style={{ borderRadius: 0 }}
               data-help-toggle="true"
-              title={isHelpMode ? "Exit Help Mode" : "Help Mode"}
-              aria-label="Help"
+              title="Click to toggle Help Mode: tap any section for tutorial info"
             >
-              <HelpCircle size={14} className={isHelpMode ? "text-[#DF4C40] animate-bounce" : "text-[#005EAC]"} />
+              <HelpCircle size={13} className={isHelpMode ? "text-[#DF4C40] animate-bounce" : "text-[#005EAC]"} />
             </button>
             {/* Theme Toggle: Sun / Moon */}
             <Tip label={themeMode === "system" ? `Theme: System (${isDarkEffective ? "Dark" : "Light"})` : themeMode === "dark" ? "Theme: Dark" : "Theme: Light"}>
@@ -2363,12 +2394,18 @@ cd TAZ && npm install && npm run dev
         {/* ─── DESKTOP / 2+ COLUMN TITLE BAR (>= 1000px) ─── */}
         <div className="titlebar-desktop">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs font-bold px-1.5 py-0.5 bg-black/40 text-white tracking-widest uppercase h-[24px] flex items-center">
-              {currentSectionConfig ? currentSectionConfig.title : "MESH NODE"}
-            </span>
-            <span className="text-sm font-black uppercase tracking-tight leading-none">
-              CAZ OS
-            </span>
+            <button
+              onClick={() => setIsWelcomeOpen(true)}
+              className="flex items-center gap-2 bg-transparent border-none p-0 cursor-pointer text-left hover:opacity-85"
+              title="Click to view CAZ Manifesto & 5 Core Pillars"
+            >
+              <span className="font-mono text-xs font-bold px-1.5 py-0.5 bg-black/40 text-white tracking-widest uppercase h-[24px] flex items-center">
+                {currentSectionConfig ? currentSectionConfig.title : "MESH NODE"}
+              </span>
+              <span className="text-sm font-black uppercase tracking-tight leading-none text-white">
+                CAZ OS
+              </span>
+            </button>
             <span className="text-xs font-mono opacity-85 hidden md:inline px-1">
               {currentSectionConfig ? currentSectionConfig.subtitle : "// SECTOR 4 AUTONOMOUS GRID"}
             </span>
@@ -2390,8 +2427,21 @@ cd TAZ && npm install && npm run dev
             </Tip>
           </div>
 
-          {/* Top Header Actions: Help Mode, SOS, Restore & Account Profile */}
+          {/* Top Header Actions: Manifesto, Help Mode, Theme, Large Text, SOS, Restore & Account Profile */}
           <div className="flex items-center gap-2">
+            {/* CAZ Manifesto / Overview Button */}
+            <Tip label="CAZ Manifesto & 5 Core Pillars">
+              <button
+                onClick={() => setIsWelcomeOpen(true)}
+                className="h-[26px] px-2 font-mono text-xs font-bold uppercase flex items-center gap-1.5 cursor-pointer border bg-white hover:bg-[#EFECE6] text-[#222D2C] border-[#222D2C] shadow-sm"
+                style={{ borderRadius: 0 }}
+                title="Open CAZ Manifesto & 5 Core Pillars Pop-up"
+              >
+                <BookOpen size={12} className="text-[#005EAC]" />
+                <span className="text-xs font-mono">MANIFESTO</span>
+              </button>
+            </Tip>
+
             {/* Prominent Help Mode Toggle */}
             <button
               onClick={() => {
@@ -3369,6 +3419,13 @@ cd TAZ && npm install && npm run dev
                   <span className="text-xs font-mono uppercase bg-[#FAD13E] text-[#222D2C] px-1.5 py-0.2 font-bold">WIP // ALPHA v2.4</span>
                 </div>
                 <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setIsWelcomeOpen(true)}
+                    className="bg-[#005EAC] hover:bg-[#004B8A] text-white px-2.5 py-0.5 font-mono text-xs font-bold uppercase transition-colors cursor-pointer flex items-center gap-1 border border-[#222D2C]"
+                  >
+                    <BookOpen size={11} />
+                    <span>5 Pillars Pop-up</span>
+                  </button>
                   <a
                     href="https://github.com/arielchuri/TAZ"
                     target="_blank"
@@ -4187,6 +4244,12 @@ npm run dev # Launches local peer mesh instance
           </Tip>
         </div>
       </Sheet>
+
+      {/* ─── CAZ Welcome & Manifesto Onboarding Pop-up ─────────────── */}
+      <WelcomeModal
+        isOpen={isWelcomeOpen}
+        onClose={() => setIsWelcomeOpen(false)}
+      />
     </div>
   );
 }
